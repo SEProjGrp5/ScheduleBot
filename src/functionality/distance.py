@@ -9,17 +9,20 @@ import requests
 import sys
 import json
 
-key_data = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname
-                                        (os.path.abspath(__file__)))), "json", "key.json")
-if not os.path.exists(key_data):
-    print(
-        '''Api Key file does not exist. Please refer to readme to add key and restart program''')
-    sys.exit("Thank you for using ScheduleBot")
-with open(key_data) as json_file:
-    data = json.load(json_file)
-    api_key_1 = data["key"]
+def get_key():
+    api_key_1=""
+    key_data = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname
+                                            (os.path.abspath(__file__)))), "json", "key.json")
+    if not os.path.exists(key_data):
+        print(
+            '''Api Key file does not exist. Please refer to readme to add key and restart program''')
+        sys.exit("Thank you for using ScheduleBot")
+    with open(key_data) as json_file:
+        data = json.load(json_file)
+        api_key_1 = data["key"]
+    return api_key_1
     
-def get_lat_log( address):
+def get_lat_log( address,api_key_1):
     """
     This function converst a textual address to a set of coordinates
 
@@ -64,12 +67,13 @@ def get_distance( dest, src,mode):
         travel time in seconds.
 
     """
+    api_key_1=get_key()
     print(src)
     print(dest)
     print(mode)
     url = 'https://maps.googleapis.com/maps/api/distancematrix/json?'
-    dest_lat_lon = get_lat_log(dest)
-    src = get_lat_log(src)
+    dest_lat_lon = get_lat_log(dest,api_key_1)
+    src = get_lat_log(src,api_key_1)
     if dest_lat_lon is None:
         print("Location not Found")
         return 0
