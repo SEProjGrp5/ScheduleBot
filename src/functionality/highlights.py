@@ -36,6 +36,7 @@ async def get_highlight(ctx, arg):
         # For every row in calendar file
         for row in rows[1:]:
             # Get event details
+            print(row)
             event['name'] = row[1]
             start = row[2].split()
             event['startDate'] = start[0]
@@ -170,3 +171,43 @@ def convert_to_12(time):
     return new_time
 
 # test()
+
+async def get_event_list(ctx, arg):
+    """
+    Function:
+        get_highlight
+    Description:
+        Shows the events planned for the day by the user.
+    Input:
+        - ctx - Discord context window
+        - arg - The input arguments which specify the date
+    Output:
+        - A message sent to the context with all the events that start and/or end today
+    """
+    # Get the date
+    day = get_date(arg)
+
+    # Open and read user's calendar file
+    create_event_tree(str(ctx.id))
+    rows = read_event_file(str(ctx.id))
+    
+    # Initialize variables
+    event = {'name': '', 'startDate': '', 'startTime': '', 'endDate': '', 'endTime': '', 'type': '', 'desc': '','loc': ''}
+    events = []
+
+    # If there are events in the file
+    if len(rows) > 1:
+        # For every row in calendar file
+        for row in rows[1:]:
+            # Get event details
+            #print(row)
+            event['name'] = row[1]
+            event['startDateTime'] = row[2]
+            event['endDateTime'] = row[3]
+            event['type'] = row[4]
+            event['desc'] = row[5]
+            event['location'] = row[6]
+            events.append(event)
+
+    return events
+           

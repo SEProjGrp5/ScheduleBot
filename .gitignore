@@ -106,7 +106,7 @@ celerybeat.pid
 user_data.json
 token.json
 key.json
-
+credentials.json
 # Environments
 .env
 .venv

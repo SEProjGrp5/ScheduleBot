@@ -4,7 +4,7 @@ import os
 import json
 
 from discord.ext.commands.help import MinimalHelpCommand
-
+from remind_event import timer
 from functionality.AddEvent import add_event  # type: ignore
 from functionality.highlights import get_highlight
 from functionality.create_event_type import create_event_type
@@ -17,7 +17,7 @@ from functionality.Google import connect_google
 from functionality.GoogleEvent import get_events
 from functionality.Delete_Event import delete_event
 
-bot = commands.Bot(command_prefix="!")  # Creates the bot with a command prefix of '!'
+bot = commands.Bot(command_prefix="!",intents=discord.Intents.all())  # Creates the bot with a command prefix of '!'
 bot.remove_command("help")  # Removes the help command, so it can be created using Discord embed pages later
 g_flag=0
 
@@ -33,6 +33,7 @@ async def help(ctx):
     Output:
         An embed window sent to the context with all commands/descriptions
     """
+    
     em = discord.Embed(
         title="ScheduleBot Commands",
         description="Here are all the commands to use ScheduleBot\nAll events are prefaced by an '!'",
@@ -88,7 +89,6 @@ async def on_ready():
         await msg.add_reaction("⏰")
     print("Sent Welcome Message to", text_channel_count, "Channel(s)")
 
-
 @bot.event
 async def on_reaction_add(reaction, user):
     """
@@ -111,6 +111,8 @@ async def on_reaction_add(reaction, user):
                 + "! I am ScheduleBot and I am here to make managing your schedule easier!"
             )
             await help(user)
+            print(user)
+            await timer(user)
         except:
             print(user.name + " (" + user.id + ") does not have DM permissions set correctly")
             pass
@@ -307,6 +309,10 @@ async def freetime(ctx):
     await get_free_time(ctx, bot)
 
 
+async def remind_event(ctx, user):
+    await remind(ctx, user)
+    
+    
 # Runs the bot (local machine)
 if __name__ == "__main__":
     from config import TOKEN
