@@ -178,6 +178,7 @@ When you look for available times, you now can use `!find` to find only the avai
 -   [v2.1](https://github.com/qchen59/ScheduleBot/releases/tag/v2.1.0): Finalized version 2, check what's new in V2
 -   [v3.0](https://github.com/SEProjGrp5/ScheduleBot/releases) Finalized version 3, check out what's new in V3
 
+
 :dizzy: Features in V2:
 ---
 
@@ -276,6 +277,7 @@ User can check their next 10 events in the google calendar
 https://user-images.githubusercontent.com/89954066/144730470-7700507e-b2e9-4175-88c0-749c15097702.mp4
 
 
+## What's new in V3
 
 ## Future features
 These are example features that could be added to ScheduleBot in the future.
