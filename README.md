@@ -22,12 +22,12 @@
   ::
   <a href="#thought_balloon-for-developers">For Developers</a>
   ::
-  <a href="#dizzy-features-in-v2">Features in V2</a>
+  <a href="#dizzy-features-in-v2">Features in V3</a>
   ::
-  <a href="#muscle-whats-new-in-v3">What's new in V3</a>
+  <a href="#muscle-whats-new-in-v3">What's new in V4 (Our addition to the project!)</a>
 </p>
 
-### Version 3 Submission Video
+### Version 4 Submission Video
 Click on the image below to check out the video!
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/3UVs0_7Tcxk/0.jpg)](http://www.youtube.com/watch?v=3UVs0_7Tcxk "ScheduleBot CSC 510 Project Group 5 NSCU")
@@ -36,8 +36,6 @@ ScheduleBot is a Python application that helps you calendarize events and work t
 
 
 With ScheduleBot you can quickly schedule events, state your prefered times for certain types of activities (exercise, homework, meetings, etc.) and quickly find out which times you have available to do more stuff.
-
-https://user-images.githubusercontent.com/34405372/139776326-722e8526-4977-4ffd-b00e-c86a8fd5f706.mp4
 
 
 :rocket: Getting started
@@ -50,7 +48,7 @@ To get a list of commands, DM the bot the command:
 
 The bot will reply back you with the list of available commands.
 
-<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="https://user-images.githubusercontent.com/34405372/140246210-6e0f176e-bb49-47ad-88d4-0b9f04ae073d.png">
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\help cmnd.png">
 
 
 ### **Scheduling an event**
@@ -64,8 +62,8 @@ To schedule a new event, just DM the bot:
 ```
 
 The bot will ask you the details of your new event.
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\schedule.png">
 
-![Schedule](docs/img/!schedul.gif)
 
 ### **I forgot my agenda for the day**
 
