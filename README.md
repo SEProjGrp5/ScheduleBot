@@ -277,7 +277,32 @@ User can check their next 10 events in the google calendar
 https://user-images.githubusercontent.com/89954066/144730470-7700507e-b2e9-4175-88c0-749c15097702.mp4
 
 
-## What's new in V4
+
+:muscle: What's new in V4:
+---
+Following are the new features that we have implemented for version 3 : 
+
+#### 1. Adding events to Google Calender:
+As and when we create events on discord those events get scheduled in your google calender.
+
+
+
+
+#### 2. Adding google reminder to the event created:
+We have added an option for google to send reminders to the user through popup message five minutes before the event start time and an email one hour before the event start time.
+
+
+
+
+
+#### 3. Displaying the weather for the day:
+The Bot displays weather conditions in the event location on a particular day when user types in the command to view summary of the events scheduled for that day.
+
+
+
+
+
+
 
 ## Future features
 These are example features that could be added to ScheduleBot in the future.
