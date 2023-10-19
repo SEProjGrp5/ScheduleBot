@@ -150,7 +150,7 @@ async def create_event_type(ctx, client, event_msg):
                         if str(line[1]) == current.get_start_time() and str(line[2]) == current.get_end_time():
                             rows.append(line)
                             line_number = line_number + 1
-                            await channel.send("Event type: " + str(line[0]) + " already exist in the given time range")
+                            await channel.send("Event type: " + str(line[0]) + " already exists in the given time range")
                             continue
                         await channel.send("Event type: " + str(
                             line[0]) + " already exist.\n Existing time range for this event type is " + str(

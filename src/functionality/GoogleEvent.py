@@ -30,7 +30,7 @@ async def get_events(ctx, arg):
         creds = Credentials.from_authorized_user_file(
             token_file, SCOPES)
     else:
-        await channel.send("You are not logged into Google. PLease login using the ConnectGoogle command")
+        await channel.send("You are not logged into Google. PLease login using the !ConnectGoogle command")
     print("token found")
     service = build('calendar', 'v3', credentials=creds)
     now = datetime.datetime.utcnow().isoformat() + 'Z'
@@ -63,3 +63,21 @@ async def get_events(ctx, arg):
         #embed.add_field(name="Description:", value=e['description'], inline=False)
         await ctx.send(embed=embed)
     
+    #adding event to calender
+    """event = {
+  'summary': 'Trying to add something',
+  'location': 'USA',
+  'description': 'SE project',
+  'start': {
+    'dateTime': '2023-10-20T09:00:00-07:00',
+    'timeZone': 'America/New_York',
+     },
+   'end': {
+    'dateTime': '2023-10-20T17:00:00-07:00',
+    'timeZone': 'America/New_York',
+     }
+    }
+
+    event = service.events().insert(calendarId='primary', body=event).execute()
+    print ('Event created: %s' % (event.get('htmlLink')))
+    """

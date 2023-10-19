@@ -17,9 +17,12 @@ from functionality.Google import connect_google
 from functionality.GoogleEvent import get_events
 from functionality.Delete_Event import delete_event
 
-bot = commands.Bot(command_prefix="!")  # Creates the bot with a command prefix of '!'
+#client = discord.Client(intents=discord.Intents.default())
+bot = commands.Bot(command_prefix="!",intents=discord.Intents.default())  # Creates the bot with a command prefix of '!'
 bot.remove_command("help")  # Removes the help command, so it can be created using Discord embed pages later
 g_flag=0
+
+
 
 @bot.group(invoke_without_command=True)
 async def help(ctx):
