@@ -3,7 +3,7 @@ import requests
 
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather?"
 
-f = open("apifile.txt", "r")
+f = open("src/apifile.txt", "r")
 
 API_KEY = f.read() 
 CITY = 'Raleigh'

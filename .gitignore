@@ -143,3 +143,4 @@ schedulebot\ copy.py
 
 # .gitignore 
 config.py
+apifile.txt
