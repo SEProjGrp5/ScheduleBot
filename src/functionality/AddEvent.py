@@ -257,6 +257,13 @@ async def add_event(ctx, client):
             'end':{
                 'dateTime': event_array[2].strftime("%Y-%m-%dT%H:%M:%S"),
                 'timeZone':'America/New_York'
+            },
+             'reminders':{
+                'useDefault': False,
+                'overrides':[
+                    {'method':'email','minutes':1*60},
+                     {'method':'popup','minutes':5},
+                ]
             }
         }
         event = service.events().insert(calendarId='primary', body=new_event).execute()
