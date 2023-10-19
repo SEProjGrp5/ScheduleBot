@@ -101,6 +101,6 @@ async def delete_event(ctx, arg):
                     await channel.send(f"The event: {e['name']} was deleted..!!")
                 else:
                     print("The entered event name does not exists..!! Please try again")
-                    await channel.send(
-                    "The entered event name does not exists..!! Please try again"
-                    )
+                    #await channel.send(
+                    #"The entered event name does not exists..!! Please try again"
+                    #)

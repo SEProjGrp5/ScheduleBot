@@ -22,12 +22,12 @@
   ::
   <a href="#thought_balloon-for-developers">For Developers</a>
   ::
-  <a href="#dizzy-features-in-v2">Features in V2</a>
+  <a href="#dizzy-features-in-v2">Features in V3</a>
   ::
-  <a href="#muscle-whats-new-in-v3">What's new in V3</a>
+  <a href="#muscle-whats-new-in-v3">What's new in V4 (Our addition to the project!)</a>
 </p>
 
-### Version 3 Submission Video
+### Version 4 Submission Video
 Click on the image below to check out the video!
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/3UVs0_7Tcxk/0.jpg)](http://www.youtube.com/watch?v=3UVs0_7Tcxk "ScheduleBot CSC 510 Project Group 5 NSCU")
@@ -36,8 +36,6 @@ ScheduleBot is a Python application that helps you calendarize events and work t
 
 
 With ScheduleBot you can quickly schedule events, state your prefered times for certain types of activities (exercise, homework, meetings, etc.) and quickly find out which times you have available to do more stuff.
-
-https://user-images.githubusercontent.com/34405372/139776326-722e8526-4977-4ffd-b00e-c86a8fd5f706.mp4
 
 
 :rocket: Getting started
@@ -50,7 +48,7 @@ To get a list of commands, DM the bot the command:
 
 The bot will reply back you with the list of available commands.
 
-<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="https://user-images.githubusercontent.com/34405372/140246210-6e0f176e-bb49-47ad-88d4-0b9f04ae073d.png">
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\help cmnd.png">
 
 
 ### **Scheduling an event**
@@ -64,8 +62,8 @@ To schedule a new event, just DM the bot:
 ```
 
 The bot will ask you the details of your new event.
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\schedule.png">
 
-![Schedule](docs/img/!schedul.gif)
 
 ### **I forgot my agenda for the day**
 
@@ -178,6 +176,7 @@ When you look for available times, you now can use `!find` to find only the avai
 -   [v2.1](https://github.com/qchen59/ScheduleBot/releases/tag/v2.1.0): Finalized version 2, check what's new in V2
 -   [v3.0](https://github.com/SEProjGrp5/ScheduleBot/releases) Finalized version 3, check out what's new in V3
 
+
 :dizzy: Features in V2:
 ---
 
@@ -274,6 +273,32 @@ User can check their next 10 events in the google calendar
 
 
 https://user-images.githubusercontent.com/89954066/144730470-7700507e-b2e9-4175-88c0-749c15097702.mp4
+
+
+
+:sparkles: What's new in V4:
+---
+Following are the new features that we have implemented for version 3 : 
+
+#### 1. Adding events to Google Calender:
+As and when we create events on discord those events get scheduled in your google calender.
+
+
+
+
+#### 2. Adding google reminder to the event created:
+We have added an option for google to send reminders to the user through popup message five minutes before the event start time and an email one hour before the event start time.
+
+
+
+
+
+#### 3. Displaying the weather for the day:
+The Bot displays weather conditions in the event location on a particular day when user types in the command to view summary of the events scheduled for that day.
+
+
+
+
 
 
 

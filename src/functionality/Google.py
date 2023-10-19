@@ -44,7 +44,7 @@ async def connect_google(ctx):
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            await channel.send("Please check the tab in yourbrowser for authentication")
+            await channel.send("Please check the tab in your browser for authentication")
             flow = InstalledAppFlow.from_client_secrets_file(
                 cred_file, SCOPES)
             creds = flow.run_local_server(port=0)
@@ -53,5 +53,5 @@ async def connect_google(ctx):
         # Save the credentials for the next run
         with open(token_file, 'w') as token:
             token.write(creds.to_json())
-    await channel.send("You are now connected to Google")
+    await channel.send("You are now connected to Google.")
     return 1
