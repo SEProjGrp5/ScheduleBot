@@ -5,6 +5,7 @@
 [![DOI](https://zenodo.org/badge/429946635.svg)](https://zenodo.org/badge/latestdoi/429946635)
 ![example workflow](https://github.com/SEProjGrp5/ScheduleBot/actions/workflows/python-app.yml/badge.svg)
 ![example workflow](https://github.com/SEProjGrp5/ScheduleBot/actions/workflows/style_checker.yml/badge.svg)
+[![Pylint](https://github.com/A1231/SEProjGrp6-ScheduleBot/actions/workflows/pylint.yml/badge.svg)](https://github.com/A1231/SEProjGrp6-ScheduleBot/actions/workflows/pylint.yml)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/qchen59/ScheduleBot)
 [![GitHub issues](https://img.shields.io/github/issues/SEProjGrp5/ScheduleBot)](https://github.com/SEProjGrp5/ScheduleBot/issues)
 [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/SEProjGrp5/ScheduleBot?display_name=release)](https://github.com/SEProjGrp5/ScheduleBot/releases)
