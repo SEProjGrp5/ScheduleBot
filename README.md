@@ -276,7 +276,7 @@ https://user-images.githubusercontent.com/89954066/144730470-7700507e-b2e9-4175-
 
 
 
-:muscle: What's new in V4:
+:sparkles: What's new in V4:
 ---
 Following are the new features that we have implemented for version 3 : 
 
