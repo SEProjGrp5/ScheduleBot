@@ -1,6 +1,10 @@
 import re
 import datetime
+from datetime import date
+
 from functionality.shared_functions import read_event_file, create_event_tree
+from functionality.weather import getWeatherData
+from functionality.distance import get_lat_log, get_key
 
 
 async def get_highlight(ctx, arg):
@@ -45,7 +49,7 @@ async def get_highlight(ctx, arg):
             event['endTime'] = convert_to_12(end[1][:-3])  # Convert to 12 hour format
             event['type'] = row[4]
             event['desc'] = row[5]
-            event['location']=row[6]
+            event['location']=row[7]
             dates = [event['startDate'], event['endDate']]
 
             flag = check_start_or_end(dates, day)
@@ -73,6 +77,26 @@ async def get_highlight(ctx, arg):
             for e in events:
                 if e['flag'] == 1:
                     await channel.send(f"You have {e['name']} scheduled , from {e['startTime']} to {e['endTime']}")
+
+                    if (e['name'] != 'Travel' and e['location']!='' and e['location']!='online' and e['location']!='Online' and e['startDate'] == str(date.today())):
+                        latlng = get_lat_log(e['location'],get_key())
+                        humidity, cel, fah, feels_like,desc = getWeatherData(latlng)
+
+                        if(fah < 70):
+                            await channel.send(f"Don't forget your Jacket! 🥶 The temperature is {fah:.1f}°F and it feels like {feels_like:.1f}°F" )
+
+                        elif(fah < 50):
+                            await channel.send(f"It is chilly! 🥶 The temperature is {fah:.1f}°F" )
+                        else:
+                            await channel.send(f"The temperature is {fah:.1f}°F and it feels like {feels_like:.1f}°F")
+
+                        await channel.send(f'{desc} today')
+
+                    else:
+                        print("What>?")
+                        print("<<<<<<<<<<<<<<<<<<<", e['location'])
+
+
                 elif e['flag'] == 2:
                     await channel.send(
                         "You have {e['name']} scheduled, from {e['startTime']} to {e['endTime']} on {e['endDate']}")
