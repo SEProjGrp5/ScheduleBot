@@ -11,7 +11,6 @@
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/A1231/SEProjGrp6-ScheduleBot)
 ![GitHub top language](https://img.shields.io/github/languages/top/A1231/SEProjGrp6-ScheduleBot)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/A1231/SEProjGrp6-ScheduleBot)
-
 [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/SEProjGrp5/ScheduleBot?display_name=release)](https://github.com/SEProjGrp5/ScheduleBot/releases)
 [![GitHub all releases](https://img.shields.io/github/downloads/SEProjGrp5/ScheduleBot/total)](https://github.com/SEProjGrp5/ScheduleBot/releases)
 [![Platform](https://img.shields.io/badge/platform-discord-blue)](https://discord.com/)
