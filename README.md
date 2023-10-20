@@ -23,7 +23,7 @@
   ::
   <a href="#thought_balloon-for-developers">For Developers</a>
   ::
-  <a href="#muscle-whats-new-in-v3">What's new in V4 (Our addition to the project!)</a>
+  <a href="#sparkles-whats-new-in-v4">What's new in V4 (Our addition to the project!)</a>
 </p>
 
 ### Version 4 Submission Video
@@ -269,29 +269,46 @@ https://user-images.githubusercontent.com/89954066/144730470-7700507e-b2e9-4175-
 
 :sparkles: What's new in V4:
 ---
-Following are the new features that we have implemented for version 3 : 
+Following are the new features that we have implemented for version 4 : 
 
-#### 1. Adding events to Google Calender:
-As and when we create events on discord those events get scheduled in your google calender.
+#### 1. Adding events to Google Calendar directly from discord:
+So far, !GoogleEvents command imports the events from Google Calendar to your discord. We have been able to add new events directly from the discord terminal to the user's google calendar. The bot returns the google calendar link once the event is successfully created. The user can then view their events on their google calendars.
 
-
-
-
-#### 2. Adding google reminder to the event created:
-We have added an option for google to send reminders to the user through popup message five minutes before the event start time and an email one hour before the event start time.
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\EventCreated.png">
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\Googlecalendar.png">
 
 
 
 
 
-#### 3. Displaying the weather for the day:
-The Bot displays weather conditions in the event location on a particular day when user types in the command to view summary of the events scheduled for that day.
+#### 2. Sending Reminders for events created:
+Want to be reminded before each event? Don't worry! Schedule Bot's here for the rescue.
+We have added an option for google to send reminders to the user through popup message five minutes before the event start time and an email an hour before the event start time.
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\Reminder.png">
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\GCalReminder.png">
 
 
 
 
 
+#### 3. Displaying the weather for the day along with the day's events:
+Get each day's weather and temperature information along with the list of events you planned for the day.
+The Bot displays weather conditions in the event location (for each event) on a particular day when user types in the command to view summary of the events scheduled for that day.
+Type in the following command for the weather to be displayed:
 
+```
+!day today
+```
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\Weather.png">
+
+#### 4. Fixed the bug caused by the delete event command:
+On executing the !deleteEvent command, the bot kept sending multiple "event does not exist" messages, even though the event does exist. That bug has been fixed in this version!
+
+Following was the issue:
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\Delete1.png">
+
+Once the issue got resolved:
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\Delete2.png">
 
 ## Future features
 These are example features that could be added to ScheduleBot in the future.
