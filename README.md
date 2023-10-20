@@ -23,8 +23,6 @@
   ::
   <a href="#thought_balloon-for-developers">For Developers</a>
   ::
-  <a href="#dizzy-features-in-v2">Features in V3</a>
-  ::
   <a href="#muscle-whats-new-in-v3">What's new in V4 (Our addition to the project!)</a>
 </p>
 
@@ -90,17 +88,7 @@ The bot will show you what you have scheduled for the date. This includes events
 
 ![Day](docs/img/!day.gif)
 
-### **I don't really want to work at 3 a.m.**
 
-You can create custom event types to further organize your schedule. You can define your preferred times by creating a new event type:
-
-```
-!typecreate
-```
-
-The bot will ask you for the name of the type and your preferred times.
-
-![Type Create](docs/img/Type%20Create.gif)
 
 ### Import & Export your calendar
 
@@ -118,19 +106,20 @@ Then drag the file to the Schedulebot.
 
 ![Import file](docs/img/!import.gif)
 
-### Looking for the spare time?
+### Looking for an event summary or want to know when you are free? 
 
 ScheduleBot will help you find your free times. Just write:
 
 ```
 !freetime
 ```
-![Freetime](docs/img/!freetime.gif)
+To look for event summary:
+```
+!summary
+```
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\Freetime.png">
 
-### Find available times for a type of event
-When you look for available times, you now can use `!find` to find only the available times in your preferred hours. 
 
-![Find Available times](docs/img/find.gif)
 
 :thought_balloon: For Developers
 ---
@@ -227,12 +216,13 @@ Thank you for caring for this project and getting involved. To start, please che
 
 Check out the [internal documentation](https://htmlpreview.github.io/?https://github.com/qchen59/ScheduleBot/blob/main/docs/src/index.html) if you want to contribute or find out about the inner workings of ScheduleBot.
 
-:muscle: What's new in V3:
+:muscle: Features in V3:
 ---
 Following are the new features that we have implemented for version 3 : 
 
 #### 1. Connection to Google: 
 We have added the functionality to connect the account to google calendar
+As and when we create events on discord those events get scheduled in your google calender.
 
 
 https://user-images.githubusercontent.com/89954066/144730436-29f74af7-36f2-45d0-a8c1-e19b5271b584.mp4
