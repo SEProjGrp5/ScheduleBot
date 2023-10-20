@@ -3,22 +3,18 @@
 ![Python v3.9](https://img.shields.io/badge/python-v3.9-blue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10023646.svg)](https://doi.org/10.5281/zenodo.10023646)
-<!---[![DOI](https://zenodo.org/badge/429946635.svg)](https://zenodo.org/badge/latestdoi/429946635) --->
 ![example workflow](https://github.com/A1231/SEProjGrp6-ScheduleBot/actions/workflows/python-app.yml/badge.svg)
 ![example workflow](https://github.com/A1231/SEProjGrp6-ScheduleBot/actions/workflows/style_checker.yml/badge.svg)
-<!--- [![Pylint](https://github.com/A1231/SEProjGrp6-ScheduleBot/actions/workflows/pylint.yml/badge.svg)](https://github.com/A1231/SEProjGrp6-ScheduleBot/actions/workflows/pylint.yml) --->
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/qchen59/ScheduleBot)
 ![GitHub issues](https://img.shields.io/github/issues/A1231/SEProjGrp6-ScheduleBot)
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/A1231/SEProjGrp6-ScheduleBot)
 ![GitHub top language](https://img.shields.io/github/languages/top/A1231/SEProjGrp6-ScheduleBot)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/A1231/SEProjGrp6-ScheduleBot)
-<!---[![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/SEProjGrp5/ScheduleBot?display_name=release)](https://github.com/SEProjGrp5/ScheduleBot/releases)--->
 ![GitHub release (with filter)](https://img.shields.io/github/v/release/A1231/SEProjGrp6-ScheduleBot)
-
 [![GitHub all releases](https://img.shields.io/github/downloads/SEProjGrp5/ScheduleBot/total)](https://github.com/SEProjGrp5/ScheduleBot/releases)
 [![Platform](https://img.shields.io/badge/platform-discord-blue)](https://discord.com/)
 [![codecov](https://codecov.io/gh/SEProjGrp5/ScheduleBot/branch/main/graph/badge.svg?token=Z53J2ZN227)](https://codecov.io/gh/SEProjGrp5/ScheduleBot)
-
+<!--- [![Pylint](https://github.com/A1231/SEProjGrp6-ScheduleBot/actions/workflows/pylint.yml/badge.svg)](https://github.com/A1231/SEProjGrp6-ScheduleBot/actions/workflows/pylint.yml) --->
 
 # ScheduleBot
 
