@@ -2,7 +2,8 @@
 
 ![Python v3.9](https://img.shields.io/badge/python-v3.9-blue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/429946635.svg)](https://zenodo.org/badge/latestdoi/429946635)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10023646.svg)](https://doi.org/10.5281/zenodo.10023646)
+<!---[![DOI](https://zenodo.org/badge/429946635.svg)](https://zenodo.org/badge/latestdoi/429946635) --->
 ![example workflow](https://github.com/A1231/SEProjGrp6-ScheduleBot/actions/workflows/python-app.yml/badge.svg)
 ![example workflow](https://github.com/A1231/SEProjGrp6-ScheduleBot/actions/workflows/style_checker.yml/badge.svg)
 [![Pylint](https://github.com/A1231/SEProjGrp6-ScheduleBot/actions/workflows/pylint.yml/badge.svg)](https://github.com/A1231/SEProjGrp6-ScheduleBot/actions/workflows/pylint.yml)
