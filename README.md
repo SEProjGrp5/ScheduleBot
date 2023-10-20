@@ -275,6 +275,8 @@ Following are the new features that we have implemented for version 4 :
 So far, !GoogleEvents command imports the events from Google Calendar to your discord. We have been able to add new events directly from the discord terminal to the user's google calendar. The bot returns the google calendar link once the event is successfully created. The user can then view their events on their google calendars.
 
 <img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\EventCreated.png">
+
+
 <img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\Googlecalendar.png">
 
 
@@ -282,9 +284,12 @@ So far, !GoogleEvents command imports the events from Google Calendar to your di
 
 
 #### 2. Sending Reminders for events created:
-Want to be reminded before each event? Don't worry! Schedule Bot's here for the rescue.
-We have added an option for google to send reminders to the user through popup message five minutes before the event start time and an email an hour before the event start time.
+Want to be reminded before each event? Don't worry! Schedule Bot's here for the rescue. We have added an option for google to send reminders to the user through popup message five minutes before the event start time and an email an hour before the event start time.
+
+
 <img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\Reminder.png">
+
+
 <img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\GCalReminder.png">
 
 
@@ -305,29 +310,28 @@ Type in the following command for the weather to be displayed:
 On executing the !deleteEvent command, the bot kept sending multiple "event does not exist" messages, even though the event does exist. That bug has been fixed in this version!
 
 Following was the issue:
+
+
 <img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\Delete1.png">
 
+
 Once the issue got resolved:
+
+
 <img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\Delete2.png">
 
-## Future features
+
+
+## Here are some ideas for the future collaborators
 These are example features that could be added to ScheduleBot in the future.
 
-### Quick event creation
+### Weather for the next 3 days
 
-You can quickly create a new event with the command
+Currently weather is shown for a particular day. It can be shown for the next few days too.
 
-```
-!schedulefind type X
-```
 
-It will find and schedule the first available X contiguous hours, on your preferred hours of the specified `type`.
-
-### Suggest event removals
-When Your entire day is scheduled
-You have event 1 of priority 4
-You try to find time for another event of priority 3
-ScheduleBot should say there is no time, but can suggest replacing event 1 as it has less priority.
+### Adding a Google Maps link for travel
+When the user blocks out time for travel from one place to another, along with calculating the distance and time required to travel, the bot can send a Google Maps link to help the user navigate.
 
 ### Edit event
 You can edit the event you created:
@@ -336,14 +340,12 @@ You can edit the event you created:
 !eventedit
 ```
 
-### Merge Discord events with Google Calendar
-Try to create a functionality to merge discord events with google calender.
+### Deleting the event from Google Calendar, once it gets deleted from discord
+Currently, the events can be deleted on discord. What can be added is, getting them to be deleted from Google Calendar too.
 
-### Replace the current csv format for storing events with Google Calendar
-As of now, the events are stired in a csv format. In the future implementation ,a functionality can be added to store the events in Google Calendar. 
 
-### Edit google events
-In this project, you can edit the events from discord. For future implemetation, a new functionalty can be created to edit events directly from Google Calendar.
-
-### Add a "How to do" documentation for discord connection
-Help user understand the process of adding the Discord bot to their server.
+## Collaborators
+Apoorva Iyer 
+Sai Challa Charitha
+Snigdha Kotharu
+Yashwanth Tanguturi
