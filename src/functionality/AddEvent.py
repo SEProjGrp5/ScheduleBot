@@ -7,6 +7,10 @@ from functionality.distance import get_distance
 from datetime import datetime, timedelta
 from parse.match import parse_period24
 
+import os
+from google.oauth2.credentials import Credentials
+from googleapiclient.discovery import build
+
 
 def check_complete(start, start_date, end, end_date, array):
     """
@@ -49,7 +53,7 @@ async def add_event(ctx, client):
         return m.content is not None and m.channel == channel and m.author == ctx.author
 
     event_array = []
-    await channel.send("Lets add an event!\n" + "First give me the name of your event:")
+    await channel.send("Let's add an event!\n" + "What is the name of your event?:")
     event_msg = await client.wait_for("message", check=check)  # Waits for user input
     event_msg = event_msg.content  # Strips message to just the text the user entered
     event_array.append(event_msg)
@@ -135,7 +139,7 @@ async def add_event(ctx, client):
                 flag+=1
                 if flag>3:
                     await channel.send(
-                    "unable to create event due to incorrect time format"
+                    "Unable to create event due to incorrect time format"
                 )
                     return
                 await channel.send(
@@ -174,14 +178,14 @@ async def add_event(ctx, client):
     create_type_tree(str(ctx.author.id))
     output = turn_types_to_string(str(ctx.author.id))
     await channel.send(
-        "Tell me what type of event this is. Here are a list of event types I currently know:\n" + output
+        "Tell me what type of event this is. Here is a list of event types I currently know:\n" + output
     )
     event_msg = await client.wait_for("message", check=check)  # Waits for user input
     event_msg = event_msg.content  # Strips message to just the text the user entered
     await create_event_type(ctx, client, event_msg)  # Running event_type creation subroutine
     event_array.append(event_msg)
     await channel.send(
-        "What is the location of the event?(Type None for no location/online)"
+        "What is the location of the event? (Type None for no location)"
     )
     event_msg = await client.wait_for("message", check=check)  # Waits for user input
     event_msg = event_msg.content  # Strips message to just the text the user entered
@@ -226,6 +230,44 @@ async def add_event(ctx, client):
     event_msg = event_msg.content  # Strips message to just the text the user entered
     if event_msg.lower() == "done":
         event_array.append("")
+        print(event_array)
+
+        #adding to GCalender
+        channel = await ctx.author.create_dm()
+        SCOPES = ['https://www.googleapis.com/auth/calendar']
+    
+        token_file = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
+        os.path.abspath(__file__)))), "json", "token.json")
+	# If the user has already logged in, the details are extractecd from token.js
+        if os.path.exists(token_file):
+            creds = Credentials.from_authorized_user_file(
+            token_file, SCOPES)
+        else:
+            await channel.send("You are not logged into Google. PLease login using the !ConnectGoogle command")
+        print("token found")
+        service = build('calendar', 'v3', credentials=creds)
+        new_event = {
+            'summary': event_array[0],
+            'location':event_array[-2],
+            'description': event_array[-1],
+            'start':{
+                'dateTime': event_array[1].strftime("%Y-%m-%dT%H:%M:%S"),
+                'timeZone':'America/New_York'
+            },
+            'end':{
+                'dateTime': event_array[2].strftime("%Y-%m-%dT%H:%M:%S"),
+                'timeZone':'America/New_York'
+            },
+             'reminders':{
+                'useDefault': False,
+                'overrides':[
+                    {'method':'email','minutes':1*60},
+                     {'method':'popup','minutes':5},
+                ]
+            }
+        }
+        event = service.events().insert(calendarId='primary', body=new_event).execute()
+        print ('Event created: %s' % (event.get('htmlLink')))
     else:
         event_array.append(event_msg)
     
@@ -235,7 +277,8 @@ async def add_event(ctx, client):
     # Tries to create an Event object from the user input
     try:
         current = Event(event_array[0], event_array[1], event_array[2], event_array[3], event_array[4], event_array[6],event_array[5])
-        await channel.send("Your event was successfully created!")
+        await channel.send("Your event was successfully created!!")
+        await channel.send('Event created: %s' % (event.get('htmlLink')))
         create_event_tree(str(ctx.author.id))
         add_event_to_file(str(ctx.author.id), current)
     except Exception as e:
@@ -243,5 +286,5 @@ async def add_event(ctx, client):
         print(e)
         TracebackType.print_exc()
         await channel.send(
-            "There was an error creating your event. Make sure your formatting is correct and try creating the event again."
+            "There was an error in creating your event. Make sure your formatting is correct and try creating the event again."
         )

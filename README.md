@@ -2,16 +2,19 @@
 
 ![Python v3.9](https://img.shields.io/badge/python-v3.9-blue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/429946635.svg)](https://zenodo.org/badge/latestdoi/429946635)
-![example workflow](https://github.com/SEProjGrp5/ScheduleBot/actions/workflows/python-app.yml/badge.svg)
-![example workflow](https://github.com/SEProjGrp5/ScheduleBot/actions/workflows/style_checker.yml/badge.svg)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10023646.svg)](https://doi.org/10.5281/zenodo.10023646)
+![example workflow](https://github.com/A1231/SEProjGrp6-ScheduleBot/actions/workflows/style_checker.yml/badge.svg)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/qchen59/ScheduleBot)
-[![GitHub issues](https://img.shields.io/github/issues/SEProjGrp5/ScheduleBot)](https://github.com/SEProjGrp5/ScheduleBot/issues)
-[![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/SEProjGrp5/ScheduleBot?display_name=release)](https://github.com/SEProjGrp5/ScheduleBot/releases)
+![GitHub issues](https://img.shields.io/github/issues/A1231/SEProjGrp6-ScheduleBot)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/A1231/SEProjGrp6-ScheduleBot)
+![GitHub top language](https://img.shields.io/github/languages/top/A1231/SEProjGrp6-ScheduleBot)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/A1231/SEProjGrp6-ScheduleBot)
+![GitHub release (with filter)](https://img.shields.io/github/v/release/A1231/SEProjGrp6-ScheduleBot)
 [![GitHub all releases](https://img.shields.io/github/downloads/SEProjGrp5/ScheduleBot/total)](https://github.com/SEProjGrp5/ScheduleBot/releases)
 [![Platform](https://img.shields.io/badge/platform-discord-blue)](https://discord.com/)
 [![codecov](https://codecov.io/gh/SEProjGrp5/ScheduleBot/branch/main/graph/badge.svg?token=Z53J2ZN227)](https://codecov.io/gh/SEProjGrp5/ScheduleBot)
-
+<!--- [![Pylint](https://github.com/A1231/SEProjGrp6-ScheduleBot/actions/workflows/pylint.yml/badge.svg)](https://github.com/A1231/SEProjGrp6-ScheduleBot/actions/workflows/pylint.yml) --->
+<!--- ![example workflow](https://github.com/A1231/SEProjGrp6-ScheduleBot/actions/workflows/python-app.yml/badge.svg) --->
 
 # ScheduleBot
 
@@ -22,22 +25,18 @@
   ::
   <a href="#thought_balloon-for-developers">For Developers</a>
   ::
-  <a href="#dizzy-features-in-v2">Features in V2</a>
-  ::
-  <a href="#muscle-whats-new-in-v3">What's new in V3</a>
+  <a href="#sparkles-whats-new-in-v4">What's new in V4 (Our addition to the project!)</a>
 </p>
 
-### Version 3 Submission Video
+### Version 4 Submission Video
 Click on the image below to check out the video!
 
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/3UVs0_7Tcxk/0.jpg)](http://www.youtube.com/watch?v=3UVs0_7Tcxk "ScheduleBot CSC 510 Project Group 5 NSCU")
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/3UVs0_7Tcxk/0.jpg)](https://youtu.be/crmKjaHUw_E "CSC 510 Project Group 6 - FALL 2023 Project 2")
 
 ScheduleBot is a Python application that helps you calendarize events and work through a Discord bot. Want to try it out? Simply follow the steps outlined in the [For Developers](#For-Developers) section. ScheduleBot can be configured to run on your Discord server by adding just one line of code!
 
 
 With ScheduleBot you can quickly schedule events, state your prefered times for certain types of activities (exercise, homework, meetings, etc.) and quickly find out which times you have available to do more stuff.
-
-https://user-images.githubusercontent.com/34405372/139776326-722e8526-4977-4ffd-b00e-c86a8fd5f706.mp4
 
 
 :rocket: Getting started
@@ -50,7 +49,7 @@ To get a list of commands, DM the bot the command:
 
 The bot will reply back you with the list of available commands.
 
-<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="https://user-images.githubusercontent.com/34405372/140246210-6e0f176e-bb49-47ad-88d4-0b9f04ae073d.png">
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\help cmnd.png">
 
 
 ### **Scheduling an event**
@@ -64,8 +63,8 @@ To schedule a new event, just DM the bot:
 ```
 
 The bot will ask you the details of your new event.
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\schedule.png">
 
-![Schedule](docs/img/!schedul.gif)
 
 ### **I forgot my agenda for the day**
 
@@ -91,17 +90,7 @@ The bot will show you what you have scheduled for the date. This includes events
 
 ![Day](docs/img/!day.gif)
 
-### **I don't really want to work at 3 a.m.**
 
-You can create custom event types to further organize your schedule. You can define your preferred times by creating a new event type:
-
-```
-!typecreate
-```
-
-The bot will ask you for the name of the type and your preferred times.
-
-![Type Create](docs/img/Type%20Create.gif)
 
 ### Import & Export your calendar
 
@@ -119,19 +108,20 @@ Then drag the file to the Schedulebot.
 
 ![Import file](docs/img/!import.gif)
 
-### Looking for the spare time?
+### Looking for an event summary or want to know when you are free? 
 
 ScheduleBot will help you find your free times. Just write:
 
 ```
 !freetime
 ```
-![Freetime](docs/img/!freetime.gif)
+To look for event summary:
+```
+!summary
+```
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\Freetime.png">
 
-### Find available times for a type of event
-When you look for available times, you now can use `!find` to find only the available times in your preferred hours. 
 
-![Find Available times](docs/img/find.gif)
 
 :thought_balloon: For Developers
 ---
@@ -177,6 +167,8 @@ When you look for available times, you now can use `!find` to find only the avai
 -   [v2.0](https://github.com/qchen59/ScheduleBot/releases/tag/v2.0.0): First version 2 release with import/export events function, find available time feature, also supports 24 hour time format and event priority.
 -   [v2.1](https://github.com/qchen59/ScheduleBot/releases/tag/v2.1.0): Finalized version 2, check what's new in V2
 -   [v3.0](https://github.com/SEProjGrp5/ScheduleBot/releases) Finalized version 3, check out what's new in V3
+-   [v4.0](https://github.com/A1231/SEProjGrp6-ScheduleBot/releases) Finalized version 4, check out what's new in V4!
+
 
 :dizzy: Features in V2:
 ---
@@ -227,12 +219,13 @@ Thank you for caring for this project and getting involved. To start, please che
 
 Check out the [internal documentation](https://htmlpreview.github.io/?https://github.com/qchen59/ScheduleBot/blob/main/docs/src/index.html) if you want to contribute or find out about the inner workings of ScheduleBot.
 
-:muscle: What's new in V3:
+:muscle: Features in V3:
 ---
 Following are the new features that we have implemented for version 3 : 
 
 #### 1. Connection to Google: 
 We have added the functionality to connect the account to google calendar
+As and when we create events on discord those events get scheduled in your google calender.
 
 
 https://user-images.githubusercontent.com/89954066/144730436-29f74af7-36f2-45d0-a8c1-e19b5271b584.mp4
@@ -277,24 +270,71 @@ https://user-images.githubusercontent.com/89954066/144730470-7700507e-b2e9-4175-
 
 
 
-## Future features
+:sparkles: What's new in V4:
+---
+Following are the new features that we have implemented for version 4 : 
+
+#### 1. Adding events to Google Calendar directly from discord:
+So far, !GoogleEvents command imports the events from Google Calendar to your discord. We have been able to add new events directly from the discord terminal to the user's google calendar. The bot returns the google calendar link once the event is successfully created. The user can then view their events on their google calendars.
+
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\EventCreated.png">
+
+
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\Googlecalendar.png">
+
+
+
+
+
+#### 2. Sending Reminders for events created:
+Want to be reminded before each event? Don't worry! Schedule Bot's here for the rescue. We have added an option for google to send reminders to the user through popup message five minutes before the event start time and an email an hour before the event start time.
+
+
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\Reminder.png">
+
+
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\GCalReminder.png">
+
+
+
+
+
+#### 3. Displaying the weather for the day along with the day's events:
+Get each day's weather and temperature information along with the list of events you planned for the day.
+The Bot displays weather conditions in the event location (for each event) on a particular day when user types in the command to view summary of the events scheduled for that day.
+Type in the following command for the weather to be displayed:
+
+```
+!day today
+```
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\Weather.png">
+
+#### 4. Fixed the bug caused by the delete event command:
+On executing the !deleteEvent command, the bot kept sending multiple "event does not exist" messages, even though the event does exist. That bug has been fixed in this version!
+
+Following was the issue:
+
+
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\Delete1.png">
+
+
+Once the issue got resolved:
+
+
+<img width="481" alt="Screen Shot 2021-11-03 at 10 15 04 PM" src="docs\img\Delete2.png">
+
+
+
+## Here are some ideas for the future collaborators
 These are example features that could be added to ScheduleBot in the future.
 
-### Quick event creation
+### Weather for the next 3 days
 
-You can quickly create a new event with the command
+Currently weather is shown for a particular day. It can be shown for the next few days too.
 
-```
-!schedulefind type X
-```
 
-It will find and schedule the first available X contiguous hours, on your preferred hours of the specified `type`.
-
-### Suggest event removals
-When Your entire day is scheduled
-You have event 1 of priority 4
-You try to find time for another event of priority 3
-ScheduleBot should say there is no time, but can suggest replacing event 1 as it has less priority.
+### Adding a Google Maps link for travel
+When the user blocks out time for travel from one place to another, along with calculating the distance and time required to travel, the bot can send a Google Maps link to help the user navigate.
 
 ### Edit event
 You can edit the event you created:
@@ -303,14 +343,20 @@ You can edit the event you created:
 !eventedit
 ```
 
-### Merge Discord events with Google Calendar
-Try to create a functionality to merge discord events with google calender.
+### Deleting the event from Google Calendar, once it gets deleted from discord
+Currently, the events can be deleted on discord. What can be added is, getting them to be deleted from Google Calendar too.
 
-### Replace the current csv format for storing events with Google Calendar
-As of now, the events are stired in a csv format. In the future implementation ,a functionality can be added to store the events in Google Calendar. 
 
-### Edit google events
-In this project, you can edit the events from discord. For future implemetation, a new functionalty can be created to edit events directly from Google Calendar.
+## Collaborators
+Apoorva Iyer 
 
-### Add a "How to do" documentation for discord connection
-Help user understand the process of adding the Discord bot to their server.
+
+Sai Challa Charitha
+
+
+Snigdha Kotharu
+
+
+Yashwanth Tanguturi
+
+
